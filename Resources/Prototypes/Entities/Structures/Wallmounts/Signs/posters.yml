@@ -941,6 +941,23 @@
   components:
   - type: Sprite
     state: poster34_legit
+# BPL14
+# These components enable players and Station AIs to "Tap the Sign"
+  - type: StationAiWhitelist
+  - type: InteractionPopup
+    interactSuccessString: bpl-tapsign
+    messagePerceivedByOthers: bpl-tapsign
+    interactSuccessSound:
+      path: /Audio/Effects/glass_knock.ogg
+  - type: TriggerOnVerb
+    text: bpl-tapverb-firm
+  - type: EmitSoundOnTrigger
+    sound: 
+      collection: MetalThud
+  - type: PopupOnTrigger
+    popupType: Large
+    text: bpl-tapsign-firm
+# End BPL14
 
 - type: entity
   parent: PosterBase
